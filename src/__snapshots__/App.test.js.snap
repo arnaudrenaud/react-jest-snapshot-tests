@@ -1,0 +1,55 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`App after advice fetched renders correctly 1`] = `
+<div
+  className="App"
+>
+  <p
+    className="Advice"
+  >
+    Always trust random advice.
+  </p>
+  <button
+    className="Advice-other-advice-button"
+    onClick={[Function]}
+  >
+    Show other advice
+  </button>
+</div>
+`;
+
+exports[`App after advice fetched when button clicked renders other random advice 1`] = `
+<div
+  className="App"
+>
+  <p
+    className="Advice"
+  >
+    Other advice.
+  </p>
+  <button
+    className="Advice-other-advice-button"
+    onClick={[Function]}
+  >
+    Show other advice
+  </button>
+</div>
+`;
+
+exports[`App before advice fetched renders correctly 1`] = `
+<div
+  className="App"
+>
+  <p
+    className="Advice"
+  >
+    …
+  </p>
+  <button
+    className="Advice-other-advice-button"
+    onClick={[Function]}
+  >
+    Show other advice
+  </button>
+</div>
+`;
