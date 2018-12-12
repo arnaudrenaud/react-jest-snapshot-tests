@@ -1,8 +1,7 @@
 import React from 'react';
-import { shallow } from 'enzyme';
+import { mount } from 'enzyme';
 import fetchMock from 'fetch-mock';
 
-import ShowOtherAdviceButton from "./ShowOtherAdviceButton";
 import App from './App';
 
 describe('App', () => {
@@ -20,15 +19,16 @@ describe('App', () => {
 
   describe('before advice fetched', () => {
     it('renders correctly', () => {
-      const wrapper = shallow(<App />);
+      const wrapper = mount(<App />);
       expect(wrapper).toMatchSnapshot();
     });
   });
 
   describe('after advice fetched', () => {
     it('renders correctly', done => {
-      const wrapper = shallow(<App />);
+      const wrapper = mount(<App />);
       setImmediate(() => {
+        wrapper.update();
         expect(wrapper).toMatchSnapshot();
         done();
       });
@@ -44,9 +44,10 @@ describe('App', () => {
       });
 
       it('renders other random advice', done => {
-        const wrapper = shallow(<App />);
-        wrapper.find(ShowOtherAdviceButton).simulate('click');
+        const wrapper = mount(<App />);
+        wrapper.find('.Advice-other-advice-button').simulate('click');
         setImmediate(() => {
+          wrapper.update();
           expect(wrapper).toMatchSnapshot();
           done();
         });

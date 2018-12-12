@@ -9,12 +9,9 @@ exports[`App after advice fetched renders correctly 1`] = `
   >
     Always trust random advice.
   </p>
-  <button
-    className="Advice-other-advice-button"
+  <ShowOtherAdviceButton
     onClick={[Function]}
-  >
-    Show other advice
-  </button>
+  />
 </div>
 `;
 
@@ -27,12 +24,9 @@ exports[`App after advice fetched when button clicked renders other random advic
   >
     Other advice.
   </p>
-  <button
-    className="Advice-other-advice-button"
+  <ShowOtherAdviceButton
     onClick={[Function]}
-  >
-    Show other advice
-  </button>
+  />
 </div>
 `;
 
@@ -45,11 +39,8 @@ exports[`App before advice fetched renders correctly 1`] = `
   >
     …
   </p>
-  <button
-    className="Advice-other-advice-button"
+  <ShowOtherAdviceButton
     onClick={[Function]}
-  >
-    Show other advice
-  </button>
+  />
 </div>
 `;
